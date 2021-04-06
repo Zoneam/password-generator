@@ -11,14 +11,17 @@ var generateBtn = document.querySelector("#generate");
 
 
 function generate() {
-  
+  let lowerCase = "abcdefghijklmnopqrstuvwxyz";
+  let upperCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+  let numbers = "0123456789";
+  let specialCharacters = "!#$%&'()*+,-./:;<=>?@[\\]^_`{|}~";
+
+
+
+
+
+
 }
-
-
-
-
-
-
 
 
 
