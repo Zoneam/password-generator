@@ -7,29 +7,36 @@ var generateBtn = document.querySelector("#generate");
   // } else 
   // console.log("false");
 
-
-
-
 function generatePassword() {
   let lowerCase = "abcdefghijklmnopqrstuvwxyz";
   let upperCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
   let numbers = "0123456789";
   let specialCharacters = "!#$%&'()*+,-./:;<=>?@[\\]^_`{|}~";
-
-
-
-  let passwordCharacters = lowerCase + upperCase;
+  let passwordCharacters = lowerCase;
   let password ="";
 
-for (i=0;  i<7;i++ ){
-  password += passwordCharacters.charAt(Math. floor(Math. random() * specialCharacters. length));
+if (document.getElementById("upper-case").checked == true) {
+  passwordCharacters+= upperCase;
 }
-console.log(password);
-return password;
-
-
+ if (document.getElementById("numeric").checked == true){
+  passwordCharacters+= numbers;
 }
 
+if (document.getElementById("special-characters").checked == true){
+  passwordCharacters+= specialCharacters;
+}
+
+
+
+  for (i=0;  i<24; i++ ){
+    password += passwordCharacters.charAt(Math.floor(Math.random()*passwordCharacters.length));
+  }
+
+  console.log(password);
+  return password;
+
+
+}
 
 // Write password to the #password input
 function writePassword() {
