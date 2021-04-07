@@ -2,15 +2,15 @@
 var generateBtn = document.querySelector("#generate");
 
 
-  if (document.getElementById("upper-case").checked == true) {
-    console.log("true");
-  } else 
-  console.log("false");
+  // if (document.getElementById("upper-case").checked == true) {
+  //   console.log("true");
+  // } else 
+  // console.log("false");
 
 
 
 
-function generate() {
+function generatePassword() {
   let lowerCase = "abcdefghijklmnopqrstuvwxyz";
   let upperCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
   let numbers = "0123456789";
@@ -18,12 +18,17 @@ function generate() {
 
 
 
+  let passwordCharacters = lowerCase + upperCase;
+  let password ="";
 
+for (i=0;  i<7;i++ ){
+  password += passwordCharacters.charAt(Math. floor(Math. random() * specialCharacters. length));
+}
+console.log(password);
+return password;
 
 
 }
-
-
 
 
 // Write password to the #password input
@@ -32,9 +37,6 @@ function writePassword() {
   var passwordText = document.querySelector("#password");
 
   passwordText.value = password;
-
-
-
 
 }
 
