@@ -99,6 +99,16 @@ button[disabled] {
 #password-length {
   margin-bottom: 15px;
 }
+input:checked + label {
+  color: rgb(211, 138, 12);
+}
+
+input[type="checkbox"] {
+  box-shadow: 0 0 0 2px rgb(255, 136, 0);
+}
+input[type="checkbox"]:checked {
+  box-shadow: 0 0 0 2px rgb(18, 179, 4);
+}
 
 #password {
   -webkit-appearance: none;
